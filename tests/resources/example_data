@@ -1,0 +1,258 @@
+'<html>
+
+<head>\n
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n<title>Upcoming Collections</title>\n
+    <meta charset="utf-8">\n
+    <link rel="stylesheet" type="text/css" href="../common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../common/css/font-awesome.min.css">
+    <style>
+        /*.collectionsrow{*/
+        \n
+        /*  border:1px solid #ccc;*/
+        \n
+        /*  border-radius:8px;*/
+        \n
+        /*  padding:5px;*/
+        \n
+        /*  margin-bottom:10px;*/
+        \n
+        /*  font-size:18px;*/
+        \n
+        /*  font-weight:500;*/
+        \n
+        /*  background:#fff;*/
+        \n
+        /*}*/
+        \n
+        /*.collectionsrow:hover{*/
+        \n
+        /*  color: #fff;*/
+        \n
+        /*    background-color: #1baab7;*/
+        \n
+        /*}*/
+        \n
+        /*img{*/
+        \n
+        /*  width:40px;*/
+        \n
+        /*  margin-right:15px;*/
+        \n
+        /*}*/
+        \n
+        /*.name{*/
+        \n \n
+        /*}*/
+        \n\n
+        /*.report-section{*/
+        \n
+        /*  margin-bottom:15px;*/
+        \n
+        /*}*/
+        \n\n
+        /*.panel-info>.panel-heading{*/
+        \n
+        /*  background-color:#1baab7;*/
+        \n
+        /*  border-color:#1baab7;*/
+        \n
+        /*  color:#fff;*/
+        \n
+        /*}*/
+        \n
+        /*.panel-info>.panel-heading+.panel-collapse>.panel-body {*/
+        \n
+        /*    border-top-color: #1baab7;*/
+        \n
+        /*}*/
+        \n\n
+        /*.panel-body{*/
+        \n
+        /*  background-color:#EDEDEE;*/
+        \n
+        /*}*/
+        \n
+        /*.btn-info {*/
+        \n
+        /*    color: #fff;*/
+        \n
+        /*    background-color: #1baab7;*/
+        \n
+        /*    border-color: #1baab7;*/
+        \n
+
+        /*}*/
+        \n\n.collectionsrow {
+            \n border: 1px solid #ccc;
+            \n border-radius: 8px;
+            \n padding: 5px;
+            \n margin-bottom: 10px;
+            \n font-size: 18px;
+            \n font-weight: 500;
+            \n background: #fff;
+            \n
+        }
+
+        \n\n.collectionsrow:hover {
+            \n color: #fff;
+            \n background-color: #9F2279;
+            \n
+        }
+
+        \n\nimg {
+            \n width: 40px;
+            \n margin-right: 15px;
+            \n
+        }
+
+        \n.name {
+            \n \n
+        }
+
+        \n\n.report-section {
+            \n margin-bottom: 15px;
+            \n
+        }
+
+        \n\n.panel-info>.panel-heading {
+            \n background-color: #B6DEE4;
+            \n border-color: #4BBCC8;
+            \n color: #000;
+            \n
+        }
+
+        \n.panel-info>.panel-heading+.panel-collapse>.panel-body {
+            \n border-top-color: #4BBCC8;
+            \n
+        }
+
+        \n\n.panel-body {
+            \n background-color: #EDEDEE;
+            \n
+        }
+
+        \n\n.btn-info {
+            \n color: #000;
+            \n background-color: #B6DEE4;
+            \n border-color: #4BBCC8;
+            \n
+        }
+
+        \n\n.collectionsbtn {
+            \n color: #000;
+            \n background-color: #B6DEE4;
+            \n border-color: #4BBCC8;
+            \n \n
+        }
+
+        \n\n.btn-info:hover {
+            \n color: #fff;
+            \n background-color: #321BA7;
+            \n
+        }
+
+        \n
+    </style>
+</head>\n
+
+<body>
+    <div id="app-content">
+        <div class="wrapper">
+            <div class="panel panel-info" id="Account_Bins_Summary_container">\n<div class="panel-heading">
+                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#service_list_container"
+                            href="#Account_Bins_Summary_collapse"><i class="fa fa-recycle"></i> Collections\n \t\t\t\t\n
+                            \t\t\t\t for 86 Chelsea Gardens Harlow<div class="pull-right loading"><span
+                                    class="pull-right"><span class="text-success"><i
+                                            class="fa fa-check-square-o"></i></span></span></div></a></h4>
+                </div>\n<div class="panel-collapse collapse in" id="Account_Bins_Summary_collapse">
+                    <div class="panel-body" id="Account_Bins_Summary_inner">
+                        <div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="accounts-summary">\n<title>
+                                Collections</title>\n<content>
+                                <div class="summary container-fluid">\n<div class="row report-section">\n<a
+                                            href="/service/Missed_waste_and_recycling_collection?widgetuprn=10003712670"
+                                            target="_parent" class="btn btn-info btn-small collectionsbtn">Report a
+                                            missed collection</a> &nbsp; \n <a href="/ssauth/register" target="_parent"
+                                            class="btn btn-info btn-small collectionsbtn">Register</a> &nbsp; \n <a
+                                            href="/login" target="_parent"
+                                            class="btn btn-info btn-small collectionsbtn">Login</a>&nbsp;\n <a
+                                            data-toggle="collapse" data-parent="#service_list_container"
+                                            href="#Account_Bins_Address_collapse"
+                                            class="btn btn-info btn-small collectionsbtn">\n \t\t\t\t\t\t Choose an
+                                            address </a>\n</div>\n<div
+                                        class="row collectionsrow panel-collapse collapse "
+                                        id="Account_Bins_Address_collapse"><iframe id="collectionaddress"
+                                            src="/fillform/?iframe_id=collectionaddress" width="100%" height="100%"
+                                            border="0" frameborder="0" scrolling="no"></iframe></div>\n<div
+                                        class="row collectionsrow">\n<div class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 03 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Refuse.png"
+                                                alt="Domestic Refuse Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Non-Recycling</div>\n<div class="col-sm-6 col-xs-6">Fri - 03 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 10 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Recycling.png"
+                                                alt="Domestic Recycling Collection"></div>\n<div
+                                            class="col-xs-4 col-sm-4">Recycling</div>\n<div class="col-sm-6 col-xs-6">
+                                            Fri - 10 Feb 2023<br>\n</div>\n</div>\n<div class="row collectionsrow">\n
+                                        <div class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 17 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Refuse.png"
+                                                alt="Domestic Refuse Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Non-Recycling</div>\n<div class="col-sm-6 col-xs-6">Fri - 17 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 24 Feb 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Recycling.png"
+                                                alt="Domestic Recycling Collection"></div>\n<div
+                                            class="col-xs-4 col-sm-4">Recycling</div>\n<div class="col-sm-6 col-xs-6">
+                                            Fri - 24 Feb 2023<br>\n</div>\n</div>\n<div class="row collectionsrow">\n
+                                        <div class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 03 Mar 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Refuse.png"
+                                                alt="Domestic Refuse Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Non-Recycling</div>\n<div class="col-sm-6 col-xs-6">Fri - 03 Mar 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Food%20Caddy.png"
+                                                alt="Domestic Food Collection"></div>\n<div class="col-xs-4 col-sm-4">
+                                            Food Caddy</div>\n<div class="col-sm-6 col-xs-6">Fri - 10 Mar 2023<br>\n
+                                        </div>\n</div>\n<div class="row collectionsrow">\n<div
+                                            class="col-xs-2 col-sm-2"><img
+                                                src="http://fs-filestore-eu.s3.amazonaws.com/harlow/bins/Recycling.png"
+                                                alt="Domestic Recycling Collection"></div>\n<div
+                                            class="col-xs-4 col-sm-4">Recycling</div>\n<div class="col-sm-6 col-xs-6">
+                                            Fri - 10 Mar 2023<br>\n</div>\n</div>\n</div>
+                            </content>\n</div>
+                    </div>
+                </div>\n</div>
+        </div>
+    </div>
+    <script src="/library/vendor/jquery/js/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../common/js/app_internal_onload.js"></script>
+    <script>(function () { \n    window.AF = window.AF || {}; \n    window.AF._iframe = window.AF._iframe || {}; \n\n    sessionStorage.clear(); \n\n    AF._iframe = { \n        forms: { \n            \'collectionaddress\': {\n                data: {\n                    \'local\': null,\n                    \'language\': \'en\',\n                    \'custom_css\': [],\n                    \'form_uri\': "sandbox-shared://AF-Process-e38aa672-38b4-4355-a601-0132ab5ef8b7/versions/7/AF-Stage-361ee725-08c0-49eb-aa18-a44a60cbee92/definition.json",\n                    \'product\' : \'Self\',\n                    \'process_uri\': null,\n                    "hideCancel": true,\n                    "submit": true,\n                    \'submission_uri\': null,\n                    \'noSubmissionMessage\': false,\n                    \'navigateAwayWarn\' : false,\n                    \'task_id\': null,\n                    \'db_id\': null,\n                    \'default_tokens\': {},\n                    \'buttonsText\': {},\n                    \'submission_message\': "",\n                    \'publish_endpoint\': "sandbox-shared://",\n                    \'integrations_list\': {\n                      \'ChooseAddress\': \'5a6b2c8861aaf\'\n                    }\n                }\n            }\n        },\n\n        getData: function(iframeID) {\n            return this.forms[iframeID];\n        }\n    };\n\n    $(\'#collectionaddress\').attr(\'src\', \'/fillform/?iframe_id=collectionaddress\');\n\n})();</script>
+    \n\n
+</body>
+
+</html>'
