@@ -1,4 +1,4 @@
-# Environment Checker
+# Harlow Bindicator
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/harlow-bindicator/build-test.yml?style=for-the-badge)
 ![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/harlow-bindicator?style=for-the-badge)
