@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- [#1](https://github.com/joe-mccarthy/harlow-bindicator/pull/1) Update dependencies via dependabot
+
 ## [1.0.0] - 2024-08-24
 
 - Initial Release
