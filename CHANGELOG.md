@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - [#1](https://github.com/joe-mccarthy/harlow-bindicator/pull/1) Update dependencies via dependabot
+- [[#2](https://github.com/joe-mccarthy/harlow-bindicator/issues/2)] Updated the tox configuration to run multiple versions of python.
 
 ## [1.0.0] - 2024-08-24
 
