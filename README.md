@@ -1,11 +1,11 @@
 # Harlow Bindicator
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/harlow-bindicator/build-test.yml)
-![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/harlow-bindicator)
-![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joe-mccarthy_harlow-bindicator?server=https%3A%2F%2Fsonarcloud.io)
-![GitHub Release](https://img.shields.io/github/v/release/joe-mccarthy/harlow-bindicator?sort=semver)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/joe-mccarthy/harlow-bindicator/latest)
-![GitHub License](https://img.shields.io/github/license/joe-mccarthy/harlow-bindicator)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/harlow-bindicator/build-test.yml?cacheSeconds=1)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/harlow-bindicator?cacheSeconds=1)
+![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joe-mccarthy_harlow-bindicator?server=https%3A%2F%2Fsonarcloud.io&cacheSeconds=1)
+![GitHub Release](https://img.shields.io/github/v/release/joe-mccarthy/harlow-bindicator?sort=semver&cacheSeconds=1)
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/joe-mccarthy/harlow-bindicator/latest?cacheSeconds=1)
+![GitHub License](https://img.shields.io/github/license/joe-mccarthy/harlow-bindicator?cacheSeconds=1)
 
 ## Contributing
 
