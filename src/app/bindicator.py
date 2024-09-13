@@ -4,6 +4,7 @@ from .api import Api
 from datetime import date
 import requests
 
+
 class Bindicator:
 
     api: Api
@@ -17,11 +18,18 @@ class Bindicator:
 
         if collections:
             logging.debug(
-                f'{len(collections)} found publishing first collection date information')
+                f"{len(collections)} found publishing first collection date information"
+            )
             if date.today() == collections[0].date:
-                message =  f'Bin collection is today for {collections[0].wheelie.bin_type}'
-                logging.info(message                   )
-                requests.post(f"https://ntfy.sh/{self.topic}",data=message.encode(encoding='utf-8'))
+                message = (
+                    f"Bin collection is today for {collections[0].wheelie.bin_type}"
+                )
+                logging.info(message)
+                requests.post(
+                    f"https://ntfy.sh/{self.topic}",
+                    data=message.encode(encoding="utf-8"),
+                )
             else:
                 logging.info(
-                    f'Next bin collection is {collections[0].date}, {collections[0].wheelie.bin_type}')
+                    f"Next bin collection is {collections[0].date}, {collections[0].wheelie.bin_type}"
+                )

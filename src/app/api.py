@@ -7,7 +7,9 @@ from .page_parser import Parser
 
 class Api:
 
-    url: str = "https://selfserve.harlow.gov.uk/appshost/firmstep/self/apps/custompage/bincollectionsecho?uprn="
+    url: str = (
+        "https://selfserve.harlow.gov.uk/appshost/firmstep/self/apps/custompage/bincollectionsecho?uprn="
+    )
 
     def __init__(self, uprn) -> None:
         self.uprn = uprn

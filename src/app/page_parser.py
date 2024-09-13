@@ -15,7 +15,7 @@ class Parser:
         collections = soup.find_all(attrs={"class": ["collectionsrow"]})
         collections.pop(0)
 
-        logging.info('Parsing html page for bin collection data')
+        logging.info("Parsing html page for bin collection data")
 
         collection_data = []
         for collection in collections:
@@ -26,7 +26,7 @@ class Parser:
             collection_data.append(Collection(bin_type, bin_date))
 
         filtered = [
-            collection_data[i: i + 2] for i in range(0, len(collection_data), 2)
+            collection_data[i : i + 2] for i in range(0, len(collection_data), 2)
         ]
 
         day_data = []

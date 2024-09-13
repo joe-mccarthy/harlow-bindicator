@@ -19,9 +19,11 @@ class CollectionDate:
         return self.date == datetime.now().date()
 
     def create_message(self) -> str:
-        payload = json.dumps({
-            "date": self.date.strftime("%d/%m/%Y"),
-            "bin_day": self.is_bin_day(),
-            "bin_type": self.wheelie.bin_type
-        })
+        payload = json.dumps(
+            {
+                "date": self.date.strftime("%d/%m/%Y"),
+                "bin_day": self.is_bin_day(),
+                "bin_type": self.wheelie.bin_type,
+            }
+        )
         return payload

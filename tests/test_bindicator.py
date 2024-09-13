@@ -7,6 +7,7 @@ from datetime import date, timedelta
 from src.app.bindicator import Bindicator
 from src.app.data import Collection, CollectionDate
 
+
 def test_bindicator_init():
     with pytest.raises(TypeError):
         Bindicator()
@@ -22,7 +23,7 @@ def test_bindicator_run_no_collections(mock_api):
 
 @patch("src.app.bindicator.Api")
 @patch("src.app.bindicator.requests")
-def test_bindicator_run_collections(mock_requests,mock_api):
+def test_bindicator_run_collections(mock_requests, mock_api):
     bindicator = Bindicator("uprn", "topic")
     today = date.today()
     collection = Collection("recycling", today.strftime("%d/%m/%Y"))
@@ -33,14 +34,16 @@ def test_bindicator_run_collections(mock_requests,mock_api):
 
     mock_api().get_data.assert_called_once()
     mock_requests.post.assert_called_once_with(
-        f"https://ntfy.sh/topic",
-        data=f"Bin collection is today for {collection_date.wheelie.bin_type}".encode(encoding='utf-8')
-        )
+        "https://ntfy.sh/topic",
+        data=f"Bin collection is today for {collection_date.wheelie.bin_type}".encode(
+            encoding="utf-8"
+        ),
+    )
 
 
 @patch("src.app.bindicator.Api")
 @patch("src.app.bindicator.requests")
-def test_no_collection_today(mock_requests,mock_api):
+def test_no_collection_today(mock_requests, mock_api):
     bindicator = Bindicator("uprn", "topic")
 
     future_date = (date.today() + timedelta(days=1)).strftime("%d/%m/%Y")

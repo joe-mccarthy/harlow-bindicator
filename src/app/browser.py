@@ -32,8 +32,7 @@ class Browser:
         executable_path = "/usr/bin/chromedriver"
         chrome_service = Service(executable_path)
 
-        driver = webdriver.Chrome(
-            service=chrome_service, options=chrome_options)
-        logging.info('Retrieving bin collection webpage')
+        driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+        logging.info("Retrieving bin collection webpage")
         driver.get(data_url)
         return driver.page_source
