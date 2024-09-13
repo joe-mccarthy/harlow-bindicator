@@ -25,11 +25,13 @@ class Bindicator:
                     f"Bin collection is today for {collections[0].wheelie.bin_type}"
                 )
                 logging.info(message)
+                logging.debug(f"Publishing message to ntfy.sh")
                 requests.post(
                     f"https://ntfy.sh/{self.topic}",
                     data=message.encode(encoding="utf-8"),
                 )
             else:
+                logging.info("No bin collection today")
                 logging.info(
                     f"Next bin collection is {collections[0].date}, {collections[0].wheelie.bin_type}"
                 )
