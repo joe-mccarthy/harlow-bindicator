@@ -1,55 +1,54 @@
 from unittest.mock import patch
 
 import pytest
+from datetime import date, timedelta
 
-from harlow_bindicator.app.bindicator import Bindicator
-from harlow_bindicator.app.configuration import Configuration
-from harlow_bindicator.app.data import Collection, CollectionDate
 
+from src.app.bindicator import Bindicator
+from src.app.data import Collection, CollectionDate
 
 def test_bindicator_init():
-    with pytest.raises(Exception):
+    with pytest.raises(TypeError):
         Bindicator()
 
 
-@patch("harlow_bindicator.app.bindicator.MQTT")
-def test_bindicator_init_config(mock_mqtt):
-    config = Configuration()
-    bindicator = Bindicator(config)
-
-    assert bindicator
-    assert bindicator.configuration
-    assert bindicator.mqtt_client
-    assert bindicator.api
-    mock_mqtt.called_once_with(config)
-
-
-@patch("harlow_bindicator.app.bindicator.MQTT")
-@patch("harlow_bindicator.app.bindicator.Api")
-def test_bindicator_run_no_collections(mock_api, mock_mqtt):
-    config = Configuration()
-    bindicator = Bindicator(config)
-
+@patch("src.app.bindicator.Api")
+def test_bindicator_run_no_collections(mock_api):
+    bindicator = Bindicator("uprn", "topic")
     mock_api().get_data.return_value = None
-
     bindicator.run()
-
-    mock_api().get_data.called_once()
-    assert not mock_mqtt().publish.called
+    mock_api().get_data.assert_called_once()
 
 
-@patch("harlow_bindicator.app.bindicator.MQTT")
-@patch("harlow_bindicator.app.bindicator.Api")
-def test_bindicator_run_collections(mock_api, mock_mqtt):
-    config = Configuration()
-    bindicator = Bindicator(config)
-
-    collection = Collection("recycling", "15/1/2023")
+@patch("src.app.bindicator.Api")
+@patch("src.app.bindicator.requests")
+def test_bindicator_run_collections(mock_requests,mock_api):
+    bindicator = Bindicator("uprn", "topic")
+    today = date.today()
+    collection = Collection("recycling", today.strftime("%d/%m/%Y"))
     collection_date = CollectionDate(collection)
     mock_api().get_data.return_value = [collection_date]
-    expected = '{"date": "15/01/2023", "bin_day": false, "bin_type": "recycling"}'
 
     bindicator.run()
 
-    mock_api().get_data.called_once()
-    mock_mqtt().publish.called_once_with(expected)
+    mock_api().get_data.assert_called_once()
+    mock_requests.post.assert_called_once_with(
+        f"https://ntfy.sh/topic",
+        data=f"Bin collection is today for {collection_date.wheelie.bin_type}".encode(encoding='utf-8')
+        )
+
+
+@patch("src.app.bindicator.Api")
+@patch("src.app.bindicator.requests")
+def test_no_collection_today(mock_requests,mock_api):
+    bindicator = Bindicator("uprn", "topic")
+
+    future_date = (date.today() + timedelta(days=1)).strftime("%d/%m/%Y")
+    collection = Collection("recycling", future_date)
+    collection_date = CollectionDate(collection)
+    mock_api().get_data.return_value = [collection_date]
+
+    bindicator.run()
+
+    mock_api().get_data.assert_called_once()
+    mock_requests.post.assert_not_called()

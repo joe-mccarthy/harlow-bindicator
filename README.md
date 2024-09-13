@@ -7,6 +7,10 @@
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/joe-mccarthy/harlow-bindicator/latest?cacheSeconds=1)
 ![GitHub License](https://img.shields.io/github/license/joe-mccarthy/harlow-bindicator?cacheSeconds=1)
 
+```bash
+sudo apt-get install chromium-chromedriver
+```
+
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.

@@ -1,20 +1,17 @@
 from unittest.mock import patch
 
-from harlow_bindicator.app.api import Api
-from harlow_bindicator.app.configuration import Configuration
+from src.app.api import Api
 
 
 def test_init():
-    config = Configuration()
-    api = Api(config)
-    assert api.configuration
+    api = Api(uprn="123456789")
+    assert api.uprn == "123456789"
 
 
-@patch("harlow_bindicator.app.api.Parser")
-@patch("harlow_bindicator.app.api.Browser")
+@patch("src.app.api.Parser")
+@patch("src.app.api.Browser")
 def test_browser_and_parser_called(mock_browser, mock_parser):
-    config = Configuration()
-    api = Api(config)
+    api = Api(uprn="123456789")
     mock_browser().get_web_page.return_value = "page_source"
     mock_parser().parse.return_value = ["data"]
 

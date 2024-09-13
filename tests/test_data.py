@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from harlow_bindicator.app.data import Collection, CollectionDate
+from src.app.data import Collection, CollectionDate
 
 
 def test_collection_date_parse():
@@ -33,7 +33,7 @@ def test_collection_date():
     assert collection_date.date == date
 
 
-@patch("harlow_bindicator.app.data.datetime")
+@patch("src.app.data.datetime")
 def test_is_binday_true(mock_datetime):
     collection = MagicMock()
     collection.date = datetime(2023, 1, 15).date()

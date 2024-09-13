@@ -4,17 +4,15 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
-from .configuration import Configuration
-
 
 class Browser:
 
-    def __init__(self, configuration: Configuration, url: str) -> None:
-        self.configuration = configuration
+    def __init__(self, uprn, url: str) -> None:
         self.url = url
+        self.uprn = uprn
 
     def get_web_page(self) -> str:
-        data_url = f"{self.url}{self.configuration.uprn}"
+        data_url = f"{self.url}{self.uprn}"
 
         chrome_options = Options()
         options = [
