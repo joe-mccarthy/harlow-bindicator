@@ -25,7 +25,7 @@ class Bindicator:
                     f"Bin collection is today for {collections[0].wheelie.bin_type}"
                 )
                 logging.info(message)
-                logging.debug(f"Publishing message to ntfy.sh")
+                logging.info(f"Publishing message to ntfy.sh")
                 requests.post(
                     f"https://ntfy.sh/{self.topic}",
                     data=message.encode(encoding="utf-8"),
