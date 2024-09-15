@@ -3,7 +3,7 @@ name: Check Binday
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '43 3 * * *'
 
 jobs:
   build:
