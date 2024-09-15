@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This release contains breaking changes from [1.0.0]
 
+## Removed
+
+- MQTT
+- Configuration scripts
+
+## Added
+
+- Sends notification to ntfy.sh
+- Command line arguments for uprn and topic name
+- Additional Logging
+
 ## Fixed
 
 - Typo in CHANGELOG
@@ -24,5 +35,6 @@ This release contains breaking changes from [1.0.0]
 
 - Initial Release
 
-[unreleased]: https://github.com/joe-mccarthy/harlow-bindicator/compare/1.0.0...HEAD
+[unreleased]: https://github.com/joe-mccarthy/harlow-bindicator/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/joe-mccarthy/harlow-bindicator/compare/1.0.0...2.0.0
 [1.0.0]: https://github.com/joe-mccarthy/harlow-bindicator/releases/tag/1.0.0
