@@ -27,7 +27,7 @@ class Bindicator:
             if today == collection_date:
                 message = f"Bin collection is today for {bin_type}"
                 logging.info(message)
-                logging.info(f"Publishing message to ntfy.sh")
+                logging.info("Publishing message to ntfy.sh")
                 requests.post(
                     f"https://ntfy.sh/{self.topic}",
                     data=message.encode(encoding="utf-8"),
@@ -40,7 +40,7 @@ class Bindicator:
             elif tomorrow == collection_date:
                 message = f"Bin collection is tomorrow for {bin_type}"
                 logging.info(message)
-                logging.info(f"Publishing message to ntfy.sh")
+                logging.info("Publishing message to ntfy.sh")
                 requests.post(
                     f"https://ntfy.sh/{self.topic}",
                     data=message.encode(encoding="utf-8"),
