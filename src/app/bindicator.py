@@ -1,7 +1,7 @@
 import logging
 
 from .api import Api
-from datetime import date
+from datetime import date, timedelta
 import requests
 
 
@@ -20,9 +20,23 @@ class Bindicator:
             logging.debug(
                 f"{len(collections)} found publishing first collection date information"
             )
-            if date.today() == collections[0].date:
+            today = date.today()
+            tomorrow = today + timedelta(days=1)
+            collection_date = collections[0].date
+            bin_type = collections[0].wheelie.bin_type
+            if today == collection_date:
                 message = (
-                    f"Bin collection is today for {collections[0].wheelie.bin_type}"
+                    f"Bin collection is today for {bin_type}"
+                )
+                logging.info(message)
+                logging.info(f"Publishing message to ntfy.sh")
+                requests.post(
+                    f"https://ntfy.sh/{self.topic}",
+                    data=message.encode(encoding="utf-8"),
+                )
+            elif tomorrow == collection_date:
+                message = (
+                    f"Bin collection is tomorrow for {bin_type}"
                 )
                 logging.info(message)
                 logging.info(f"Publishing message to ntfy.sh")
@@ -33,5 +47,5 @@ class Bindicator:
             else:
                 logging.info("No bin collection today")
                 logging.info(
-                    f"Next bin collection is {collections[0].date}, {collections[0].wheelie.bin_type}"
+                    f"Next bin collection is {collection_date}, {bin_type}"
                 )
