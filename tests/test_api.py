@@ -16,5 +16,5 @@ def test_browser_and_parser_called(mock_browser, mock_parser):
     mock_parser().parse.return_value = ["data"]
 
     assert api.get_data()[0] == "data"
-    mock_browser.get_web_page.called_once()
-    mock_parser.parse.called_once_with("page_source")
+    mock_browser().get_web_page.assert_called_once()
+    mock_parser().parse.assert_called_once_with("page_source")

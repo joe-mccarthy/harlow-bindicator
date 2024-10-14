@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- [#8](https://github.com/joe-mccarthy/harlow-bindicator/issues/8) Remove Python 3.8 as end of life.
+
 ## [2.1.0]
 
 ### Changed
