@@ -18,7 +18,9 @@ jobs:
           python-version: 3.12
       - name: Run image
         uses: abatilo/actions-poetry@v2
-      - name: View poetry --help
-        run: poetry install | poetry run pytest --cov=harlow_bindicator --cov-report xml --cov-report term
+      - name: Install the project dependencies
+        run: poetry install
+      - name: Run tests
+        run: poetry run pytest --cov=harlow_bindicator --cov-report xml --cov-report term
       - name: Coveralls
         uses: coverallsapp/github-action@v2
