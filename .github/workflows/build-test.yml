@@ -19,6 +19,6 @@ jobs:
       - name: Run image
         uses: abatilo/actions-poetry@v2
       - name: View poetry --help
-        run: poetry run pytest --cov=harlow_bindicator --cov-report xml --cov-report term
+        run: poetry install | poetry run pytest --cov=harlow_bindicator --cov-report xml --cov-report term
       - name: Coveralls
         uses: coverallsapp/github-action@v2
