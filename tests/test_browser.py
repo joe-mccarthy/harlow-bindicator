@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 from selenium.webdriver import Chrome
 
-from src.app.browser import Browser
+from harlow_bindicator.browser import Browser
 
 
 def test_constructor():
@@ -17,7 +17,7 @@ def test_constructor_with_configuration():
     assert browser.url == "test_url"
 
 
-@patch("src.app.browser.webdriver")
+@patch("harlow_bindicator.browser.webdriver")
 def test_get_data(web_driver):
     browser = Browser("123456", "test_url")
     chrome = MagicMock(spec=Chrome)
@@ -29,7 +29,7 @@ def test_get_data(web_driver):
     chrome.get.assert_called_once_with("test_url123456")
 
 
-@patch("src.app.browser.webdriver")
+@patch("harlow_bindicator.browser.webdriver")
 def test_get_data_simple_mocks(web_driver):
     browser = Browser("123456", "test_url")
     web_driver.Chrome().page_source = "page_data"

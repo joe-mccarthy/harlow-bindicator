@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "harlow-bindicator"
+version = "2.2.0"
+description = "Send alert the day before and on the day of bin collection in Harlow"
+authors = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+selenium = "^4.27.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+black = "^24.10.0"
+pytest-cov = "^6.0.0"
+pytest-randomly = "^3.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+harlow-bindicator = "harlow_bindicator.main:fetch_bin_collection"

@@ -1,160 +1,11 @@
-'<html>
+<html>
 
 <head>\n
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n<title>Upcoming Collections</title>\n
     <meta charset="utf-8">\n
     <link rel="stylesheet" type="text/css" href="../common/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../common/css/font-awesome.min.css">
-    <style>
-        /*.collectionsrow{*/
-        \n
-        /*  border:1px solid #ccc;*/
-        \n
-        /*  border-radius:8px;*/
-        \n
-        /*  padding:5px;*/
-        \n
-        /*  margin-bottom:10px;*/
-        \n
-        /*  font-size:18px;*/
-        \n
-        /*  font-weight:500;*/
-        \n
-        /*  background:#fff;*/
-        \n
-        /*}*/
-        \n
-        /*.collectionsrow:hover{*/
-        \n
-        /*  color: #fff;*/
-        \n
-        /*    background-color: #1baab7;*/
-        \n
-        /*}*/
-        \n
-        /*img{*/
-        \n
-        /*  width:40px;*/
-        \n
-        /*  margin-right:15px;*/
-        \n
-        /*}*/
-        \n
-        /*.name{*/
-        \n \n
-        /*}*/
-        \n\n
-        /*.report-section{*/
-        \n
-        /*  margin-bottom:15px;*/
-        \n
-        /*}*/
-        \n\n
-        /*.panel-info>.panel-heading{*/
-        \n
-        /*  background-color:#1baab7;*/
-        \n
-        /*  border-color:#1baab7;*/
-        \n
-        /*  color:#fff;*/
-        \n
-        /*}*/
-        \n
-        /*.panel-info>.panel-heading+.panel-collapse>.panel-body {*/
-        \n
-        /*    border-top-color: #1baab7;*/
-        \n
-        /*}*/
-        \n\n
-        /*.panel-body{*/
-        \n
-        /*  background-color:#EDEDEE;*/
-        \n
-        /*}*/
-        \n
-        /*.btn-info {*/
-        \n
-        /*    color: #fff;*/
-        \n
-        /*    background-color: #1baab7;*/
-        \n
-        /*    border-color: #1baab7;*/
-        \n
-
-        /*}*/
-        \n\n.collectionsrow {
-            \n border: 1px solid #ccc;
-            \n border-radius: 8px;
-            \n padding: 5px;
-            \n margin-bottom: 10px;
-            \n font-size: 18px;
-            \n font-weight: 500;
-            \n background: #fff;
-            \n
-        }
-
-        \n\n.collectionsrow:hover {
-            \n color: #fff;
-            \n background-color: #9F2279;
-            \n
-        }
-
-        \n\nimg {
-            \n width: 40px;
-            \n margin-right: 15px;
-            \n
-        }
-
-        \n.name {
-            \n \n
-        }
-
-        \n\n.report-section {
-            \n margin-bottom: 15px;
-            \n
-        }
-
-        \n\n.panel-info>.panel-heading {
-            \n background-color: #B6DEE4;
-            \n border-color: #4BBCC8;
-            \n color: #000;
-            \n
-        }
-
-        \n.panel-info>.panel-heading+.panel-collapse>.panel-body {
-            \n border-top-color: #4BBCC8;
-            \n
-        }
-
-        \n\n.panel-body {
-            \n background-color: #EDEDEE;
-            \n
-        }
-
-        \n\n.btn-info {
-            \n color: #000;
-            \n background-color: #B6DEE4;
-            \n border-color: #4BBCC8;
-            \n
-        }
-
-        \n\n.collectionsbtn {
-            \n color: #000;
-            \n background-color: #B6DEE4;
-            \n border-color: #4BBCC8;
-            \n \n
-        }
-
-        \n\n.btn-info:hover {
-            \n color: #fff;
-            \n background-color: #321BA7;
-            \n
-        }
-
-        \n
-    </style>
-</head>\n
-
+   
 <body>
     <div id="app-content">
         <div class="wrapper">
@@ -246,13 +97,7 @@
                             </content>\n</div>
                     </div>
                 </div>\n</div>
-        </div>
-    </div>
-    <script src="/library/vendor/jquery/js/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="../common/js/app_internal_onload.js"></script>
-    <script>(function () { \n    window.AF = window.AF || {}; \n    window.AF._iframe = window.AF._iframe || {}; \n\n    sessionStorage.clear(); \n\n    AF._iframe = { \n        forms: { \n            \'collectionaddress\': {\n                data: {\n                    \'local\': null,\n                    \'language\': \'en\',\n                    \'custom_css\': [],\n                    \'form_uri\': "sandbox-shared://AF-Process-e38aa672-38b4-4355-a601-0132ab5ef8b7/versions/7/AF-Stage-361ee725-08c0-49eb-aa18-a44a60cbee92/definition.json",\n                    \'product\' : \'Self\',\n                    \'process_uri\': null,\n                    "hideCancel": true,\n                    "submit": true,\n                    \'submission_uri\': null,\n                    \'noSubmissionMessage\': false,\n                    \'navigateAwayWarn\' : false,\n                    \'task_id\': null,\n                    \'db_id\': null,\n                    \'default_tokens\': {},\n                    \'buttonsText\': {},\n                    \'submission_message\': "",\n                    \'publish_endpoint\': "sandbox-shared://",\n                    \'integrations_list\': {\n                      \'ChooseAddress\': \'5a6b2c8861aaf\'\n                    }\n                }\n            }\n        },\n\n        getData: function(iframeID) {\n            return this.forms[iframeID];\n        }\n    };\n\n    $(\'#collectionaddress\').attr(\'src\', \'/fillform/?iframe_id=collectionaddress\');\n\n})();</script>
-    \n\n
+        </div>  
 </body>
 
-</html>'
+</html>

@@ -4,8 +4,8 @@ import pytest
 from datetime import date, timedelta
 
 
-from src.app.bindicator import Bindicator
-from src.app.data import Collection, CollectionDate
+from harlow_bindicator.bindicator import Bindicator
+from harlow_bindicator.data import Collection, CollectionDate
 
 
 def test_bindicator_init():
@@ -13,7 +13,7 @@ def test_bindicator_init():
         Bindicator()
 
 
-@patch("src.app.bindicator.Api")
+@patch("harlow_bindicator.bindicator.Api")
 def test_bindicator_run_no_collections(mock_api):
     bindicator = Bindicator("uprn", "topic")
     mock_api().get_data.return_value = None
@@ -21,8 +21,8 @@ def test_bindicator_run_no_collections(mock_api):
     mock_api().get_data.assert_called_once()
 
 
-@patch("src.app.bindicator.Api")
-@patch("src.app.bindicator.requests")
+@patch("harlow_bindicator.bindicator.Api")
+@patch("harlow_bindicator.bindicator.requests")
 def test_bindicator_run_collections(mock_requests, mock_api):
     bindicator = Bindicator("uprn", "topic")
     today = date.today()
@@ -46,8 +46,8 @@ def test_bindicator_run_collections(mock_requests, mock_api):
     )
 
 
-@patch("src.app.bindicator.Api")
-@patch("src.app.bindicator.requests")
+@patch("harlow_bindicator.bindicator.Api")
+@patch("harlow_bindicator.bindicator.requests")
 def test_bincollection_tomorrow(mock_requests, mock_api):
     bindicator = Bindicator("uprn", "topic")
     today = date.today()
@@ -73,8 +73,8 @@ def test_bincollection_tomorrow(mock_requests, mock_api):
     )
 
 
-@patch("src.app.bindicator.Api")
-@patch("src.app.bindicator.requests")
+@patch("harlow_bindicator.bindicator.Api")
+@patch("harlow_bindicator.bindicator.requests")
 def test_no_collection_today(mock_requests, mock_api):
     bindicator = Bindicator("uprn", "topic")
 

@@ -1,6 +1,6 @@
 from unittest.mock import patch
 
-from src.app.api import Api
+from harlow_bindicator.api import Api
 
 
 def test_init():
@@ -8,8 +8,8 @@ def test_init():
     assert api.uprn == "123456789"
 
 
-@patch("src.app.api.Parser")
-@patch("src.app.api.Browser")
+@patch("harlow_bindicator.api.Parser")
+@patch("harlow_bindicator.api.Browser")
 def test_browser_and_parser_called(mock_browser, mock_parser):
     api = Api(uprn="123456789")
     mock_browser().get_web_page.return_value = "page_source"

@@ -1,9 +1,10 @@
 import logging
 import argparse
 
-from app.bindicator import Bindicator
+from .bindicator import Bindicator
 
-if __name__ == "__main__":
+
+def fetch_bin_collection():
 
     logging.basicConfig(
         level="INFO",
@@ -18,6 +19,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--topic", type=str, required=True, help="Ntfy Topic")
     args = parser.parse_args()
+    print(args)
     bindicator = Bindicator(args.uprn, args.topic)
     bindicator.run()
     logging.info("Harlow Bindicator run completed")

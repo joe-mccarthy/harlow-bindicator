@@ -1,6 +1,6 @@
 from datetime import date
 
-from src.app.page_parser import Parser
+from harlow_bindicator.page_parser import Parser
 
 
 def test_parse_example_data():
