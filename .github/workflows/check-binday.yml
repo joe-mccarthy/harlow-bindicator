@@ -17,12 +17,12 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: 3.12
           cache: 'pip'
       - name: Install dependencies
         run: |
             python -m pip install --upgrade pip
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            pip install harlow-bindicator
       - name: Run Bindicator
         run: |
           python src/main.py --uprn ${{ secrets.UPRN }} --topic ${{ secrets.TOPIC }}
