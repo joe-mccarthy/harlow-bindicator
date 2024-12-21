@@ -25,4 +25,4 @@ jobs:
             pip install harlow-bindicator
       - name: Run Bindicator
         run: |
-          python src/main.py --uprn ${{ secrets.UPRN }} --topic ${{ secrets.TOPIC }}
+          harlow-bindicator --uprn ${{ secrets.UPRN }} --topic ${{ secrets.TOPIC }}
