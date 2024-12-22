@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "harlow-bindicator"
-version = "2.2.3"
+version = "2.2.4"
 description = "Send alert the day before and on the day of bin collection in Harlow"
 authors = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
 readme = "README.md"
