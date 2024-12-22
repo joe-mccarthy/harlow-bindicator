@@ -15,26 +15,26 @@ This script can be run two ways either as a stand alone script that's scheduled 
 
 ### Running as a GitHub Action
 
-There is a workflow within this repository [check-binday.yaml](.github/workflows/check-binday.yml) which is scheduled for early morning each day to check for bin collections. This workflow requires two secrets, firsly the [UPRN](https://www.findmyaddress.co.uk/search) to be checked for, and the [ntfy.sh](https://ntfy.sh/) topic to publish the message to. Then you'll start recieving notifications when you'll need to put bins out and which bin it is.
+There is a workflow within this repository [check-binday.yaml](https://github.com/joe-mccarthy/harlow-bindicator/blob/main/.github/workflows/check-binday.yml) which is scheduled for early morning each day to check for bin collections. This workflow requires two secrets, firsly the [UPRN](https://www.findmyaddress.co.uk/search) to be checked for, and the [ntfy.sh](https://ntfy.sh/) topic to publish the message to. Then you'll start recieving notifications when you'll need to put bins out and which bin it is.
 
 ### Running locally
+
+The script requires additional tools to run, in order to load the webpage that provides the bin information from Harlow Local Authority which is the chromium-chromedriver, just run the command below.
+
+```bash
+sudo apt-get install chromium-chromedriver
+```
+
+Install Harlow Bindicator
+
+```
+pip install harlow-bindicator
+```
 
 The set up is very similar to how it's run on GitHub actions, with the requirement of a uprn and a ntfy.sh topic. Running the script is as simple as 
 
 ```bash
-python src/main.py --uprn "12379870" --topic "topic-name"
-```
-
-However before running the script be sure to installe the requirements for python with 
-
-```
-pip install -r requirements
-```
-
-The script also requires additional tools to run, in order to load the webpage that provides the bin information from Harlow Local Authority which is the chromium-chromedriver, just run the command below.
-
-```bash
-sudo apt-get install chromium-chromedriver
+harlow-bindicator--uprn "12379870" --topic "topic-name"
 ```
 
 ## Contributing
