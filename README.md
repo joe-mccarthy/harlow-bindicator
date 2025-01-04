@@ -1,11 +1,10 @@
 # Harlow Bindicator
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/harlow-bindicator/build-test.yml?cacheSeconds=1)
-![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/harlow-bindicator?cacheSeconds=1)
-![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joe-mccarthy_harlow-bindicator?server=https%3A%2F%2Fsonarcloud.io&cacheSeconds=1)
-![GitHub Release](https://img.shields.io/github/v/release/joe-mccarthy/harlow-bindicator?sort=semver&cacheSeconds=1)
-![GitHub commits since latest release](https://img.shields.io/github/commits-since/joe-mccarthy/harlow-bindicator/latest?cacheSeconds=1)
-![GitHub License](https://img.shields.io/github/license/joe-mccarthy/harlow-bindicator?cacheSeconds=1)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/harlow-bindicator/build-test.yml?cacheSeconds=1&style=for-the-badge)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/harlow-bindicator?cacheSeconds=1&style=for-the-badge)
+![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joe-mccarthy_harlow-bindicator?server=https%3A%2F%2Fsonarcloud.io&cacheSeconds=1&style=for-the-badge)
+![PyPI - Version](https://img.shields.io/pypi/v/harlow-bindicator?style=for-the-badge&link=https%3A%2F%2Fpypi.org%2Fproject%2Fharlow-bindicator%2F)
+![GitHub License](https://img.shields.io/github/license/joe-mccarthy/harlow-bindicator?cacheSeconds=1&style=for-the-badge)
 
 Script when run goes the the Harlow Local Authority website collects the bin collection dates for a given __UPRN__ then sends a notification to __ntfy.sh__ if required. This script can either be run locally or as with this repository as a GitHub action.
 
