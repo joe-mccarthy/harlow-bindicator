@@ -3,7 +3,12 @@ name = "harlow-bindicator"
 version = "3.0.0"
 description = "Send alert the day before and on the day of bin collection in Harlow"
 authors = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
+maintainers = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
+documentation = "https://github.com/joe-mccarthy/harlow-bindicator"
+license = "MIT"
 readme = "README.md"
+homepage = "https://github.com/joe-mccarthy/harlow-bindicator"
+repository = "https://github.com/joe-mccarthy/harlow-bindicator"
 
 [tool.poetry.dependencies]
 python = "^3.12"
