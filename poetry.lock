@@ -21,17 +21,18 @@ tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "beautifulsoup4"
-version = "4.12.3"
+version = "4.13.3"
 description = "Screen-scraping library"
 optional = false
-python-versions = ">=3.6.0"
+python-versions = ">=3.7.0"
 files = [
-    {file = "beautifulsoup4-4.12.3-py3-none-any.whl", hash = "sha256:b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed"},
-    {file = "beautifulsoup4-4.12.3.tar.gz", hash = "sha256:74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051"},
+    {file = "beautifulsoup4-4.13.3-py3-none-any.whl", hash = "sha256:99045d7d3f08f91f0d656bc9b7efbae189426cd913d830294a15eefa0ea4df16"},
+    {file = "beautifulsoup4-4.13.3.tar.gz", hash = "sha256:1bd32405dacc920b42b83ba01644747ed77456a65760e285fbc47633ceddaf8b"},
 ]
 
 [package.dependencies]
 soupsieve = ">1.2"
+typing-extensions = ">=4.0.0"
 
 [package.extras]
 cchardet = ["cchardet"]
@@ -586,13 +587,13 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "selenium"
-version = "4.28.1"
+version = "4.29.0"
 description = "Official Python bindings for Selenium WebDriver"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "selenium-4.28.1-py3-none-any.whl", hash = "sha256:4238847e45e24e4472cfcf3554427512c7aab9443396435b1623ef406fff1cc1"},
-    {file = "selenium-4.28.1.tar.gz", hash = "sha256:0072d08670d7ec32db901bd0107695a330cecac9f196e3afb3fa8163026e022a"},
+    {file = "selenium-4.29.0-py3-none-any.whl", hash = "sha256:ce5d26f1ddc1111641113653af33694c13947dd36c2df09cdd33f554351d372e"},
+    {file = "selenium-4.29.0.tar.gz", hash = "sha256:3a62f7ec33e669364a6c0562a701deb69745b569c50d55f1a912bf8eb33358ba"},
 ]
 
 [package.dependencies]
