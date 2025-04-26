@@ -19,7 +19,7 @@ class Parser:
 
         collection_data = []
         for collection in collections:
-            children = collection.findChildren("div", recursive=False)
+            children = collection.find_all("div", recursive=False)
             children.pop(0)
             bin_type = self.__get_type(children[0].contents)
             bin_date = self.__get_date(children[1].contents)
