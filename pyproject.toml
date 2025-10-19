@@ -20,8 +20,8 @@ requests = "^2.32.3"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 black = ">=24.10,<26.0"
-pytest-cov = "^6.0.0"
-pytest-randomly = "^3.16.0"
+pytest-cov = ">=6,<8"
+pytest-randomly = ">=3.16,<5.0"
 
 [build-system]
 requires = ["poetry-core"]
